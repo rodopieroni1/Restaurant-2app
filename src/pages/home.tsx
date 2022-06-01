@@ -40,7 +40,7 @@ function Home() {
             <SimpleCard
               title={restaurant.name}
               descripcion={restaurant.description}
-              handleButton={() => console.log("Test")}
+              handleButton={() => console.log("Test20")}
               image={restaurant.image}
             />
           </Grid>
