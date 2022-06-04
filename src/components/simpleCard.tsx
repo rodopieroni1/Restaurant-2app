@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
 
 interface Props {
   title: string;
@@ -31,9 +32,11 @@ export const SimpleCard = ({
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={handleButton}>
-          Acceder
-        </Button>
+        <Link to="details/1">
+          <Button size="small" color="primary" onClick={handleButton}>
+            Acceder
+          </Button>
+        </Link>
       </CardActions>
     </Card>
   );
