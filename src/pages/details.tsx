@@ -1,5 +1,4 @@
-import { Grid } from "@mui/material";
-import { Container } from "@mui/system";
+import { Grid, Container } from "@material-ui/core";
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";

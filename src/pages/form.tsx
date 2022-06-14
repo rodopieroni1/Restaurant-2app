@@ -1,3 +1,3 @@
 export const Form = () => {
-  <div>Test</div>;
+  return <div>Test</div>;
 };
