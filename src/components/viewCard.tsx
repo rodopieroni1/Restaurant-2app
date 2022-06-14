@@ -6,21 +6,30 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  root: {
+    padding: "lem",
+    minWidth: 250,
+  },
+  media: {
+    heigt: "70vh",
+  },
+});
 
 interface Props {
   title: string;
   descripcion: string;
-  handleButton: () => void;
   image: string;
-  to: any;
+  subDescripcion: any;
 }
 
-export const SimpleCard = ({
+export const ViewCard = ({
   title,
   descripcion,
-  handleButton,
   image,
-  to,
+  subDescripcion,
 }: Props) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -29,17 +38,13 @@ export const SimpleCard = ({
         <Typography gutterBottom variant="h5" component="div">
           {title}
         </Typography>
-        <Typography variant="body2" component="p" color="text.secondary">
+        <Typography variant="body1" component="p" color="text.secondary">
           {descripcion}
         </Typography>
+        <Typography variant="body1" component="p" color="text.secondary">
+          {subDescripcion}
+        </Typography>
       </CardContent>
-      <CardActions>
-        <Link to={to}>
-          <Button size="small" color="primary" onClick={handleButton}>
-            Acceder
-          </Button>
-        </Link>
-      </CardActions>
     </Card>
   );
 };

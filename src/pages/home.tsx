@@ -35,6 +35,7 @@ function Home() {
                 descripcion={restaurant.description}
                 handleButton={() => console.log("Test29")}
                 image={restaurant.image}
+                to={"details/" + restaurant.id}
               />
             </Grid>
           ))}

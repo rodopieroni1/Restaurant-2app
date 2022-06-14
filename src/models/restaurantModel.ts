@@ -12,9 +12,13 @@ export interface RestaurantModel {
   image: string;
   price: number;
   name: string;
-  turn: TurnModel;
+  turn: TurnModel[];
 }
 
 export interface RestaurantState extends BaseState {
   data: RestaurantModel[];
+}
+
+export interface DetailState extends BaseState {
+  data: RestaurantModel;
 }
