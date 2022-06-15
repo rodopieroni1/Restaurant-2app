@@ -1,6 +1,5 @@
 import { Grid, Container } from "@material-ui/core";
-import * as React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getRestaurantsById } from "../api/restaurant";
 import { ManageStatus, ViewCard } from "../components";
@@ -59,8 +58,10 @@ export const Details = () => {
                 subDescripcion={restaurant.address}
               />
             </Grid>
+
             <Grid item xs={12} sm={6}>
               <Form />
+              {/* <div>Test</div> */}
             </Grid>
           </Grid>
         </Container>
